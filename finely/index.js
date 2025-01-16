@@ -3,7 +3,7 @@ const morgan = require('morgan');
 
 require('dotenv').config();
 require('./libs/dbConnect');
-
+const userRouter = require('./routes/user.route');
 const app = express();
 app.set('views', './views');
 app.set('view engine', 'ejs');
@@ -18,8 +18,10 @@ app.get('/about', (req, res) => {
     res.render('index', { message: 'The About Page' });
 });
 app.get('*', (req, res) => {
+    res.render('index', { message: 'Hello From Node.js' });
     res.status(404).render('index', { message: 'Not Found' });
     });
+app.use('/users', userRouter);
 const PORT = 3000;
 app.listen(PORT, () => {
 console.log(`Server running on port ${PORT}`);
