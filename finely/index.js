@@ -21,7 +21,7 @@ app.get('*', (req, res) => {
     res.render('index', { message: 'Hello From Node.js' });
     res.status(404).render('index', { message: 'Not Found' });
     });
-app.use('/users', userRouter);
+app.use('/users', userRouter);a
 const PORT = 3000;
 app.listen(PORT, () => {
 console.log(`Server running on port ${PORT}`);
