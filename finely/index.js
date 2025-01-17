@@ -21,10 +21,10 @@ app.get('*', (req, res) => {
     res.render('index', { message: 'Hello From Node.js' });
     res.status(404).render('index', { message: 'Not Found' });
     });
-app.use('/users', userRouter);a
+app.use('/users', userRouter);
 const PORT = 3000;
 app.listen(PORT, () => {
-console.log(`Server running on port ${PORT}`);b
+console.log(`Server running on port ${PORT}`);c
 });
 
 <button className="btn btn-primary text-white bg-blue-500 border-2">Subscribe</button>
