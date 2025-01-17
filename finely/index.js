@@ -24,7 +24,7 @@ app.get('*', (req, res) => {
 app.use('/users', userRouter);
 const PORT = 3000;
 app.listen(PORT, () => {
-console.log(`Server running on port ${PORT}`);c
+console.log(`Server running on port ${PORT}`);sd
 });
 
 <button className="btn btn-primary text-white bg-blue-500 border-2">Subscribe</button>
