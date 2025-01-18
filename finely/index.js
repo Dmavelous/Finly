@@ -7,7 +7,9 @@ const userRouter = require('./routes/user.route');
 const app = express();
 app.set('views', './views');
 app.set('view engine', 'ejs');
+
 app.use(morgan('dev'));
+
 app.get('/', (req, res) => {
     res.render('index', { message: 'Hello From Node.js' });
 });
@@ -24,7 +26,7 @@ app.get('*', (req, res) => {
 app.use('/users', userRouter);
 const PORT = 3000;
 app.listen(PORT, () => {
-console.log(`Server running on port ${PORT}`);sd
+console.log(`Server running on port ${PORT}`);
 });
 
 <button className="btn btn-primary text-white bg-blue-500 border-2">Subscribe</button>
