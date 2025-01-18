@@ -5,9 +5,9 @@ require('dotenv').config();
 require('./libs/dbConnect');
 const userRouter = require('./routes/user.route');
 const app = express();
+const session = require('express-session');
 app.set('views', './views');
 app.set('view engine', 'ejs');
-
 app.use(morgan('dev'));
 app.use(express.static('./public'));
 app.get('/', (req, res) => {
