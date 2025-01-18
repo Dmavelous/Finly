@@ -10,6 +10,13 @@ app.set('views', './views');
 app.set('view engine', 'ejs');
 app.use(morgan('dev'));
 app.use(express.static('./public'));
+app.use(
+    session({
+    secret: process.env.AUTH_SECRET,
+    saveUninitialized: true,
+    resave: false,
+    })
+    );
 app.get('/', (req, res) => {
     res.render('index', { message: 'Hello From Node.js' });
 });
